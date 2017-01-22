@@ -65,8 +65,8 @@
             <p>Acesse via GET: http://localhost', $rootpath, 'photo/</p>
             <p>Acesse via GET: http://localhost', $rootpath, 'photo/create</p>
             <p>Acesse via POST: http://localhost', $rootpath, 'photo/</p>
-            <p>Acesse via GET: http://localhost', $rootpath, 'photo/show/{digite o nome ou ID}</p>
-            <p>Acesse via GET: http://localhost', $rootpath, 'photo/show/{digite o nome ou ID}/edit</p>
+            <p>Acesse via GET: http://localhost', $rootpath, 'photo/{digite o nome ou ID}</p>
+            <p>Acesse via GET: http://localhost', $rootpath, 'photo/{digite o nome ou ID}/edit</p>
             <p>Acesse via PUT: http://localhost', $rootpath, 'photo/{digite o nome ou ID}</p>
             <p>Acesse via DELETE: http://localhost', $rootpath, 'photo/{digite o nome ou ID}</p>
             ';
@@ -79,8 +79,8 @@
             <p>Acesse via GET: http://localhost', $rootpath, 'usuario/</p>
             <p>Acesse via GET: http://localhost', $rootpath, 'usuario/create</p>
             <p>Acesse via POST: http://localhost', $rootpath, 'usuario/</p>
-            <p>Acesse via GET: http://localhost', $rootpath, 'usuario/show/{digite o nome ou ID}</p>
-            <p>Acesse via GET: http://localhost', $rootpath, 'usuario/show/{digite o nome ou ID}/edit</p>
+            <p>Acesse via GET: http://localhost', $rootpath, 'usuario/{digite o nome ou ID}</p>
+            <p>Acesse via GET: http://localhost', $rootpath, 'usuario/{digite o nome ou ID}/edit</p>
             <p>Acesse via PUT: http://localhost', $rootpath, 'usuario/{digite o nome ou ID}</p>
             <p>Acesse via DELETE: http://localhost', $rootpath, 'usuario/{digite o nome ou ID}</p>
             ';
