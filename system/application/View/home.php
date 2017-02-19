@@ -62,13 +62,13 @@
         <div class="rotas">
         <?php
             echo '
-            <p>Acesse via GET: http://localhost', $rootpath, 'photo/</p>
-            <p>Acesse via GET: http://localhost', $rootpath, 'photo/create</p>
-            <p>Acesse via POST: http://localhost', $rootpath, 'photo/</p>
-            <p>Acesse via GET: http://localhost', $rootpath, 'photo/{digite o nome ou ID}</p>
-            <p>Acesse via GET: http://localhost', $rootpath, 'photo/{digite o nome ou ID}/edit</p>
-            <p>Acesse via PUT: http://localhost', $rootpath, 'photo/{digite o nome ou ID}</p>
-            <p>Acesse via DELETE: http://localhost', $rootpath, 'photo/{digite o nome ou ID}</p>
+            <p>Acesse via GET: ', $host, $rootpath, 'photo/</p>
+            <p>Acesse via GET: ', $host, $rootpath, 'photo/create</p>
+            <p>Acesse via POST: ', $host, $rootpath, 'photo/</p>
+            <p>Acesse via GET: ', $host, $rootpath, 'photo/{digite o nome ou ID}</p>
+            <p>Acesse via GET: ', $host, $rootpath, 'photo/{digite o nome ou ID}/edit</p>
+            <p>Acesse via PUT: ', $host, $rootpath, 'photo/{digite o nome ou ID}</p>
+            <p>Acesse via DELETE: ', $host, $rootpath, 'photo/{digite o nome ou ID}</p>
             ';
         ?>
         </div>
@@ -76,13 +76,13 @@
         <div class="rotas">
         <?php
             echo '
-            <p>Acesse via GET: http://localhost', $rootpath, 'usuario/</p>
-            <p>Acesse via GET: http://localhost', $rootpath, 'usuario/create</p>
-            <p>Acesse via POST: http://localhost', $rootpath, 'usuario/</p>
-            <p>Acesse via GET: http://localhost', $rootpath, 'usuario/{digite o nome ou ID}</p>
-            <p>Acesse via GET: http://localhost', $rootpath, 'usuario/{digite o nome ou ID}/edit</p>
-            <p>Acesse via PUT: http://localhost', $rootpath, 'usuario/{digite o nome ou ID}</p>
-            <p>Acesse via DELETE: http://localhost', $rootpath, 'usuario/{digite o nome ou ID}</p>
+            <p>Acesse via GET: ', $host, $rootpath, 'usuario/</p>
+            <p>Acesse via GET: ', $host, $rootpath, 'usuario/create</p>
+            <p>Acesse via POST: ', $host, $rootpath, 'usuario/</p>
+            <p>Acesse via GET: ', $host, $rootpath, 'usuario/{digite o nome ou ID}</p>
+            <p>Acesse via GET: ', $host, $rootpath, 'usuario/{digite o nome ou ID}/edit</p>
+            <p>Acesse via PUT: ', $host, $rootpath, 'usuario/{digite o nome ou ID}</p>
+            <p>Acesse via DELETE: ', $host, $rootpath, 'usuario/{digite o nome ou ID}</p>
             ';
         ?>
         </div>

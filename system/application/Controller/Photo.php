@@ -7,16 +7,10 @@ use Inphinit\Routing\Route;
 
 class Photo
 {
-    public function __construct()
-    {
-        Response::type('application/json');
-    }
-
     // acesse via GET http://site/photo/
     public function index()
     {
-        //O metodo json só criei pra facilitar
-        $this->json(array(
+        return json_encode(array(
             'response' => 'Olá, mundo!'
         ));
     }
@@ -24,7 +18,7 @@ class Photo
     // acesse via GET http://site/photo/create
     public function create()
     {
-        $this->json(array(
+        return json_encode(array(
             'response' => 'criou algo'
         ));
     }
@@ -32,7 +26,7 @@ class Photo
     // acesse via POST http://site/photo/
     public function store()
     {
-        $this->json(array(
+        return json_encode(array(
             'response' => 'enviou uma foto'
         ));
     }
@@ -40,7 +34,7 @@ class Photo
     // acesse via GET http://site/photo/show/<digite o nome ou ID>
     public function show($id)
     {
-        $this->json(array(
+        return json_encode(array(
             'response' => 'exibir foto: ' . $id
         ));
     }
@@ -48,7 +42,7 @@ class Photo
     // acesse via GET http://site/photo/show/<digite o nome ou ID>/edit
     public function edit($id)
     {
-        $this->json(array(
+        return json_encode(array(
             'response' => 'editar foto: ' . $id
         ));
     }
@@ -56,7 +50,7 @@ class Photo
     // acesse via PUT http://site/photo/<digite o nome ou ID>
     public function update($id)
     {
-        $this->json(array(
+        return json_encode(array(
             'response' => 'atualizar foto: ' . $id
         ));
     }
@@ -64,16 +58,8 @@ class Photo
     // acesse via DELETE http://site/photo/<digite o nome ou ID>
     public function destroy($id)
     {
-        $this->json(array(
+        return json_encode(array(
             'response' => 'deletar foto: ' . $id
         ));
-    }
-
-    private function json($saida)
-    {
-        //Só envia saida depois do evento ready
-        App::on('ready', function() use ($saida) {
-            echo json_encode($saida);
-        });
     }
 }

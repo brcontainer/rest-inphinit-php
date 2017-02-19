@@ -2,21 +2,14 @@
 namespace Controller;
 
 use Inphinit\App;
-use Inphinit\Response;
 use Inphinit\Routing\Route;
 
 class Usuario
 {
-    public function __construct()
-    {
-        Response::type('application/json');
-    }
-
     // acesse via GET http://site/usuario/
     public function index()
     {
-        //O metodo json só criei pra facilitar
-        $this->json(array(
+        return json_encode(array(
             'response' => 'Olá, mundo!'
         ));
     }
@@ -24,7 +17,7 @@ class Usuario
     // acesse via GET http://site/usuario/create
     public function create()
     {
-        $this->json(array(
+        return json_encode(array(
             'response' => 'criou algo'
         ));
     }
@@ -32,7 +25,7 @@ class Usuario
     // acesse via POST http://site/usuario/
     public function store()
     {
-        $this->json(array(
+        return json_encode(array(
             'response' => 'salvou dados do usuário'
         ));
     }
@@ -40,7 +33,7 @@ class Usuario
     // acesse via GET http://site/usuario/show/<digite o nome ou ID>
     public function show($id)
     {
-        $this->json(array(
+        return json_encode(array(
             'response' => 'exibir dados usuário: ' . $id
         ));
     }
@@ -48,7 +41,7 @@ class Usuario
     // acesse via GET http://site/usuario/show/<digite o nome ou ID>/edit
     public function edit($id)
     {
-        $this->json(array(
+        return json_encode(array(
             'response' => 'editar usuário: ' . $id
         ));
     }
@@ -56,7 +49,7 @@ class Usuario
     // acesse via PUT http://site/usuario/<digite o nome ou ID>
     public function update($id)
     {
-        $this->json(array(
+        return json_encode(array(
             'response' => 'atualizar usuário: ' . $id
         ));
     }
@@ -64,16 +57,8 @@ class Usuario
     // acesse via DELETE http://site/usuario/<digite o nome ou ID>
     public function destroy($id)
     {
-        $this->json(array(
+        return json_encode(array(
             'response' => 'deletar usuário: ' . $id
         ));
-    }
-
-    private function json($saida)
-    {
-        //Só envia saida depois do evento ready
-        App::on('ready', function() use ($saida) {
-            echo json_encode($saida);
-        });
     }
 }

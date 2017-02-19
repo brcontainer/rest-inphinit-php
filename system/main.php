@@ -38,18 +38,21 @@ App::on('changestatus', function ($status, $msg) {
 Route::set('ANY', '/', 'Home:index');
 
 /*
-    Adiciona o prefixo /photo para que todas urls do REST precisem acessar como:
-    * http://site/foo/bar/photo
-    * http://site/foo/bar/photo/create
-    * http://site/foo/bar/photo/delete/id
-*/
-
+ * Adiciona o prefixo /photo para que todas urls do REST precisem acessar como:
+ * http://site/foo/bar/photo
+ * http://site/foo/bar/photo/create
+ * http://site/foo/bar/photo/delete/id
+ */
 Group::create()->path('/photo/')->then(function() {
-    //Cria rotas do REST
-    Rest::create('Photo')->prepare();
-})->prepare();
+    Rest::create('Photo');
+});
 
+/*
+ * Adiciona o prefixo /usuario para que todas urls do REST precisem acessar como:
+ * http://site/foo/bar/usuario
+ * http://site/foo/bar/usuario/create
+ * http://site/foo/bar/usuario/delete/id
+ */
 Group::create()->path('/usuario/')->then(function() {
-    //Cria rotas do REST
-    Rest::create('Usuario')->prepare();
-})->prepare();
+    Rest::create('Usuario');
+});
