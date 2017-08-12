@@ -6,10 +6,30 @@ use Inphinit\Routing\Route;
 use Inphinit\Experimental\Routing\Rest;
 use Inphinit\Experimental\Routing\Group;
 
-/*
-    Essa parte é opcional
- */
+//Apenas para exibir a index como um guia
+Route::set('ANY', '/', 'Home:index');
 
+/*
+ * Adiciona o prefixo /photo para que todas urls do REST precisem acessar como:
+ * http://site/foo/bar/photo
+ * http://site/foo/bar/photo/create
+ * http://site/foo/bar/photo/delete/id
+ */
+Group::create()->path('/photo/')->then(function() {
+    Rest::create('Photo');
+});
+
+/*
+ * Adiciona o prefixo /usuario para que todas urls do REST precisem acessar como:
+ * http://site/foo/bar/usuario
+ * http://site/foo/bar/usuario/create
+ * http://site/foo/bar/usuario/delete/id
+ */
+Group::create()->path('/usuario/')->then(function() {
+    Rest::create('Usuario');
+});
+
+//Essa parte é opcional
 App::on('changestatus', function ($status, $msg) {
     if ($status === 503) {
         Response::type('application/json');
@@ -32,27 +52,4 @@ App::on('changestatus', function ($status, $msg) {
 
         exit;
     }
-});
-
-//Apenas para exibir a index como um guia
-Route::set('ANY', '/', 'Home:index');
-
-/*
- * Adiciona o prefixo /photo para que todas urls do REST precisem acessar como:
- * http://site/foo/bar/photo
- * http://site/foo/bar/photo/create
- * http://site/foo/bar/photo/delete/id
- */
-Group::create()->path('/photo/')->then(function() {
-    Rest::create('Photo');
-});
-
-/*
- * Adiciona o prefixo /usuario para que todas urls do REST precisem acessar como:
- * http://site/foo/bar/usuario
- * http://site/foo/bar/usuario/create
- * http://site/foo/bar/usuario/delete/id
- */
-Group::create()->path('/usuario/')->then(function() {
-    Rest::create('Usuario');
 });

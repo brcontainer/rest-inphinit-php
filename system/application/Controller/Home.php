@@ -1,8 +1,8 @@
 <?php
 namespace Controller;
 
-use Inphinit\View;
 use Inphinit\Request;
+use Inphinit\Viewing\View;
 
 class Home
 {
